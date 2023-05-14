@@ -37,37 +37,37 @@ if (sorteioDePaises.includes(jogadas))
 }
 else if (jogadas != sorteioDePaises && erros == 0)
 {
-  document.getElementById("gabriel").innerHTML += `O<br>`
+  document.getElementById("resultado2").innerHTML += `O<br>`
   erros += 1;
-  document.getElementById("letraserradas").innerHTML += `${palavrasErradas}`;
+  document.getElementById("letrasErradas").innerHTML += `${palavrasErradas}`;
 }
 else if (jogadas != sorteioDePaises && erros == 1) 
 {
-  document.getElementById("gabriel").innerHTML += ` |<br>`
+  document.getElementById("resultado2").innerHTML += ` |<br>`
   erros += 1;
-  document.getElementById("letraserradas").innerHTML += `, ${palavrasErradas}`;
+  document.getElementById("letrasErradas").innerHTML += `, ${palavrasErradas}`;
 }
 else if (jogadas != sorteioDePaises && erros == 2) 
 {
-  document.getElementById("gabriel").innerHTML += `/<br>`
+  document.getElementById("resultado2").innerHTML += `/<br>`
   erros += 1;
-  document.getElementById("letraserradas").innerHTML += `, ${palavrasErradas}`;
+  document.getElementById("letrasErradas").innerHTML += `, ${palavrasErradas}`;
 }
 else if (jogadas != sorteioDePaises && erros == 3) 
 {
-  document.getElementById("gabriel").innerHTML += `<br>`
+  document.getElementById("resultado2").innerHTML += `<br>`
   erros += 1;
-  document.getElementById("letraserradas").innerHTML += `, ${palavrasErradas}`;
+  document.getElementById("letrasErradas").innerHTML += `, ${palavrasErradas}`;
 }
 else if (jogadas != sorteioDePaises && erros == 4)
 {
   erros += 1;
-  document.getElementById("letraserradas").innerHTML += `, ${palavrasErradas}`;
+  document.getElementById("letrasErradas").innerHTML += `, ${palavrasErradas}`;
 }
 else if (jogadas != sorteioDePaises && erros == 5) 
 {
   erros += 1;
-  document.getElementById("letraserradas").innerHTML += `, ${palavrasErradas}`;
+  document.getElementById("letrasErradas").innerHTML += `, ${palavrasErradas}`;
   document.getElementById("reset").innerHTML += `<button onclick="Reiniciar()">Reiniciar</button>`
 }
 
