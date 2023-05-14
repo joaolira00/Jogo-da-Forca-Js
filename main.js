@@ -1,14 +1,14 @@
 var paises;
-var sorteiodepaises;
+var sorteioDePaises;
 var mascara;
 var erros;
-var palavraserradas;
+var palavrasErradas;
 
 paises = ["alemanha", "coreia do sul", "estados unidos", "japao", "franca"];
-sorteiodepaises = paises[Math.floor(Math.random() * paises.length)];
-mascara = sorteiodepaises.replace(/[a-z]/g, "#");
+sorteioDePaises = paises[Math.floor(Math.random() * paises.length)];
+mascara = sorteioDePaises.replace(/[a-z]/g, "#");
 
-//document.getElementById("devmode").innerHTML = `${sorteiodepaises}`;
+//document.getElementById("devmode").innerHTML = `${sorteioDePaises}`;
 
 document.getElementById("resultado").innerHTML = mascara;
 
@@ -20,14 +20,14 @@ function Forca(params) {
   var i;
 
   jogadas = document.getElementById("jogadas").value;
-  palavraserradas = [jogadas];
+  palavrasErradas = [jogadas];
 
-if (sorteiodepaises.includes(jogadas))
+if (sorteioDePaises.includes(jogadas))
 {
     
-  for (i = 0; i < sorteiodepaises.length; i++) 
+  for (i = 0; i < sorteioDePaises.length; i++) 
   {
-    if (sorteiodepaises[i] === jogadas) 
+    if (sorteioDePaises[i] === jogadas) 
     {
       mascara = mascara.substr(0, i) + jogadas + mascara.substr(i + 1);
         
@@ -35,49 +35,49 @@ if (sorteiodepaises.includes(jogadas))
     }
   }
 }
-else if (jogadas != sorteiodepaises && erros == 0)
+else if (jogadas != sorteioDePaises && erros == 0)
 {
   document.getElementById("gabriel").innerHTML += `O<br>`
   erros += 1;
-  document.getElementById("letraserradas").innerHTML += `${palavraserradas}`;
+  document.getElementById("letraserradas").innerHTML += `${palavrasErradas}`;
 }
-else if (jogadas != sorteiodepaises && erros == 1) 
+else if (jogadas != sorteioDePaises && erros == 1) 
 {
   document.getElementById("gabriel").innerHTML += ` |<br>`
   erros += 1;
-  document.getElementById("letraserradas").innerHTML += `, ${palavraserradas}`;
+  document.getElementById("letraserradas").innerHTML += `, ${palavrasErradas}`;
 }
-else if (jogadas != sorteiodepaises && erros == 2) 
+else if (jogadas != sorteioDePaises && erros == 2) 
 {
   document.getElementById("gabriel").innerHTML += `/<br>`
   erros += 1;
-  document.getElementById("letraserradas").innerHTML += `, ${palavraserradas}`;
+  document.getElementById("letraserradas").innerHTML += `, ${palavrasErradas}`;
 }
-else if (jogadas != sorteiodepaises && erros == 3) 
+else if (jogadas != sorteioDePaises && erros == 3) 
 {
   document.getElementById("gabriel").innerHTML += `<br>`
   erros += 1;
-  document.getElementById("letraserradas").innerHTML += `, ${palavraserradas}`;
+  document.getElementById("letraserradas").innerHTML += `, ${palavrasErradas}`;
 }
-else if (jogadas != sorteiodepaises && erros == 4)
+else if (jogadas != sorteioDePaises && erros == 4)
 {
   erros += 1;
-  document.getElementById("letraserradas").innerHTML += `, ${palavraserradas}`;
+  document.getElementById("letraserradas").innerHTML += `, ${palavrasErradas}`;
 }
-else if (jogadas != sorteiodepaises && erros == 5) 
+else if (jogadas != sorteioDePaises && erros == 5) 
 {
   erros += 1;
-  document.getElementById("letraserradas").innerHTML += `, ${palavraserradas}`;
+  document.getElementById("letraserradas").innerHTML += `, ${palavrasErradas}`;
   document.getElementById("reset").innerHTML += `<button onclick="Reiniciar()">Reiniciar</button>`
 }
 
 if (mascara.includes("#") == false) 
   {
-    document.write(`Você ganhou!!!! <br> A palavra era ${sorteiodepaises}!!!`);
+    document.write(`Você ganhou!!!! <br> A palavra era ${sorteioDePaises}!!!`);
   }
 
 if (erros == 6) {
-  document.write(`Game over!!!<br> A palavra era ${sorteiodepaises}.<br><button onclick="Reiniciar()">Reiniciar</button>`);
+  document.write(`Game over!!!<br> A palavra era ${sorteioDePaises}.<br><button onclick="Reiniciar()">Reiniciar</button>`);
 }
 }
 
